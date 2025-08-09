@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindfulSpace - Therapy & Wellness Support</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-container">
+            <div class="header-brand">
+                <div class="brand-icon">
+                    <i data-lucide="heart"></i>
+                </div>
+                <div class="brand-text">
+                    <h1 class="brand-name">MindfulSpace</h1>
+                    <p class="brand-tagline">Therapy & Wellness</p>
+                </div>
+            </div>
+
+            <nav class="header-nav desktop-nav">
+                <a href="#" data-page="home" class="nav-link active">Home</a>
+                <a href="#" data-page="about" class="nav-link">About</a>
+                <a href="#" data-page="community" class="nav-link">Community</a>
+                <a href="#" data-page="resources" class="nav-link">Resources</a>
+                <a href="#" data-page="contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="auth-button" class="btn btn-primary">Get Support</button>
+                <div id="user-menu" class="user-menu" style="display: none;">
+                    <button class="btn btn-outline" data-page="dashboard">Dashboard</button>
+                    <button class="btn btn-outline" data-page="chat">Chat</button>
+                    <button id="logout-button" class="btn btn-outline">Logout</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <a href="#" data-page="home" class="mobile-nav-link">Home</a>
+            <a href="#" data-page="about" class="mobile-nav-link">About</a>
+            <a href="#" data-page="community" class="mobile-nav-link">Community</a>
+            <a href="#" data-page="resources" class="mobile-nav-link">Resources</a>
+            <a href="#" data-page="contact" class="mobile-nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Homepage -->
+        <section id="page-home" class="page active">
+            <div class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <i data-lucide="shield-check"></i>
+                            <span>Anonymous • Safe • Available 24/7</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            Your Safe Space for <span class="gradient-text">Mental Wellness</span>
+                        </h1>
+                        
+                        <p class="hero-description">
+                            Connect with trained professionals and supportive communities in a completely anonymous, 
+                            judgment-free environment. Your mental health journey starts here.
+                        </p>
+                        
+                        <div class="hero-actions">
+                            <button class="btn btn-primary btn-lg" data-page="auth">
+                                <i data-lucide="heart"></i>
+                                Start Your Journey
+                            </button>
+                            <button class="btn btn-outline btn-lg" data-page="about">
+                                <i data-lucide="info"></i>
+                                Learn More
+                            </button>
+                        </div>
+                        
+                        <div class="trust-indicators">
+                            <div class="trust-item">
+                                <i data-lucide="shield"></i>
+                                <span>100% Anonymous</span>
+                            </div>
+                            <div class="trust-item">
+                                <i data-lucide="clock"></i>
+                                <span>24/7 Support</span>
+                            </div>
+                            <div class="trust-item">
+                                <i data-lucide="heart"></i>
+                                <span>Trained Professionals</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>How We Support Your Mental Health Journey</h2>
+                        <p>Professional, anonymous, and empathetic support designed for your wellbeing.</p>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                            <h3>Chat with Professionals</h3>
+                            <p>Connect instantly with licensed mental health professionals for one-on-one support.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <h3>Join Support Groups</h3>
+                            <p>Find community with others who understand your challenges and experiences.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i data-lucide="brain"></i>
+                            </div>
+                            <h3>AI-Powered Insights</h3>
+                            <p>Receive personalized recommendations and coping strategies tailored to you.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i data-lucide="book-open"></i>
+                            </div>
+                            <h3>Self-Help Resources</h3>
+                            <p>Access a comprehensive library of articles, tools, and guided exercises.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="page-about" class="page">
+            <div class="hero-section">
+                <div class="container">
+                    <div class="hero-badge">
+                        <i data-lucide="heart"></i>
+                        <span>Science Fair Project • Educational Purpose</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        About <span class="gradient-text">MindfulSpace</span>
+                    </h1>
+                    <p class="hero-description">
+                        We believe everyone deserves access to mental health support in a safe, anonymous environment. 
+                        Our platform demonstrates how technology can break down barriers to mental wellness.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-content">
+                            <h2>Our Mission</h2>
+                            <p>MindfulSpace was created as a science fair project to demonstrate how technology can make 
+                            mental health support more accessible. We provide anonymous, safe spaces for people to 
+                            connect with trained agents and supportive communities.</p>
+                            
+                            <p>Our platform removes barriers like stigma, cost, and privacy concerns that often prevent 
+                            people from seeking help when they need it most.</p>
+                            
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">10,000+</div>
+                                    <div class="stat-label">Lives Touched</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">24/7</div>
+                                    <div class="stat-label">Support Available</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">100%</div>
+                                    <div class="stat-label">Anonymous & Safe</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">50+</div>
+                                    <div class="stat-label">Trained Professionals</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-image">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&h=400&q=80" 
+                                 alt="Mental health support and community" 
+                                 class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Auth Page -->
+        <section id="page-auth" class="page">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h2>Create Your Anonymous Account</h2>
+                        <p>No personal information required. Choose your support journey.</p>
+                    </div>
+                    
+                    <form id="auth-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="anonymous-name">Anonymous Username</label>
+                            <input type="text" id="anonymous-name" placeholder="Choose any name you'd like" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Select Your Support Areas (Optional)</label>
+                            <div class="challenge-options">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" value="anxiety" name="challenges">
+                                    <span class="checkmark"></span>
+                                    Anxiety & Stress
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" value="depression" name="challenges">
+                                    <span class="checkmark"></span>
+                                    Depression & Low Mood
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" value="relationships" name="challenges">
+                                    <span class="checkmark"></span>
+                                    Relationships & Social
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" value="grief" name="challenges">
+                                    <span class="checkmark"></span>
+                                    Grief & Loss
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" value="work" name="challenges">
+                                    <span class="checkmark"></span>
+                                    Work & Career Stress
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" value="selfesteem" name="challenges">
+                                    <span class="checkmark"></span>
+                                    Self-Esteem & Confidence
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg full-width">
+                            <i data-lucide="user-plus"></i>
+                            Create Account & Continue
+                        </button>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Your privacy is our priority. No email, phone number, or real name required.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard -->
+        <section id="page-dashboard" class="page">
+            <div class="dashboard-container">
+                <div class="dashboard-header">
+                    <div class="container">
+                        <h1>Welcome Back, <span id="user-name">Friend</span></h1>
+                        <p>Your personal wellness dashboard</p>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Quick Actions</h3>
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <div class="card-content">
+                                <button class="btn btn-primary full-width" data-page="chat">
+                                    <i data-lucide="message-circle"></i>
+                                    Start Chat Session
+                                </button>
+                                <button class="btn btn-outline full-width" data-page="community">
+                                    <i data-lucide="users"></i>
+                                    Join Support Group
+                                </button>
+                                <button class="btn btn-outline full-width" data-page="resources">
+                                    <i data-lucide="book-open"></i>
+                                    Browse Resources
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Your Support Areas</h3>
+                                <i data-lucide="heart"></i>
+                            </div>
+                            <div class="card-content">
+                                <div id="user-challenges" class="challenge-tags">
+                                    <!-- Will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Today's Insight</h3>
+                                <i data-lucide="brain"></i>
+                            </div>
+                            <div class="card-content">
+                                <p id="daily-insight">Remember that healing is not linear. Every small step forward is progress worth celebrating.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Interface -->
+        <section id="page-chat" class="page">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-user-info">
+                        <div class="user-avatar">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <div class="user-details">
+                            <h3>Dr. Sarah M.</h3>
+                            <p class="user-status">
+                                <span class="status-indicator online"></span>
+                                Licensed Therapist • Available Now
+                            </p>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <button class="btn btn-outline">
+                            <i data-lucide="phone"></i>
+                        </button>
+                        <button class="btn btn-outline">
+                            <i data-lucide="video"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message received">
+                        <div class="message-content">
+                            <p>Hello! I'm Dr. Sarah, and I'm here to support you today. How are you feeling right now?</p>
+                        </div>
+                        <div class="message-time">Just now</div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <form id="chat-form" class="chat-input-form">
+                        <input type="text" id="chat-input" placeholder="Type your message here..." required>
+                        <button type="submit" class="btn btn-primary">
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Page -->
+        <section id="page-community" class="page">
+            <div class="hero-section">
+                <div class="container">
+                    <div class="hero-badge">
+                        <i data-lucide="users"></i>
+                        <span>Safe • Moderated • Anonymous</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Join Our <span class="gradient-text">Community</span>
+                    </h1>
+                    <p class="hero-description">
+                        Connect with others who understand your journey. Find support, share experiences, 
+                        and grow together in our safe, moderated community spaces.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="container">
+                    <div class="community-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">8,743</div>
+                            <div class="stat-label">Active Members</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Support Groups</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Moderation</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Anonymous</div>
+                        </div>
+                    </div>
+                    
+                    <div class="community-groups">
+                        <h2>Support Groups</h2>
+                        <div class="groups-grid">
+                            <div class="group-card">
+                                <div class="group-header">
+                                    <div class="group-emoji">🌸</div>
+                                    <div class="group-info">
+                                        <h3>Anxiety Support Circle</h3>
+                                        <p>1,247 members</p>
+                                    </div>
+                                    <div class="activity-badge active">Very Active</div>
+                                </div>
+                                <p class="group-description">Share coping strategies and support each other through anxious moments.</p>
+                                <div class="group-tags">
+                                    <span class="tag">Breathing Techniques</span>
+                                    <span class="tag">Mindfulness</span>
+                                    <span class="tag">Support</span>
+                                </div>
+                                <button class="btn btn-primary full-width">
+                                    <i data-lucide="users"></i>
+                                    Join Group
+                                </button>
+                            </div>
+                            
+                            <div class="group-card">
+                                <div class="group-header">
+                                    <div class="group-emoji">🕊️</div>
+                                    <div class="group-info">
+                                        <h3>Grief & Healing Journey</h3>
+                                        <p>892 members</p>
+                                    </div>
+                                    <div class="activity-badge moderate">Active</div>
+                                </div>
+                                <p class="group-description">A gentle space for those navigating loss and the healing process.</p>
+                                <div class="group-tags">
+                                    <span class="tag">Loss</span>
+                                    <span class="tag">Healing</span>
+                                    <span class="tag">Remembrance</span>
+                                </div>
+                                <button class="btn btn-primary full-width">
+                                    <i data-lucide="users"></i>
+                                    Join Group
+                                </button>
+                            </div>
+                            
+                            <div class="group-card">
+                                <div class="group-header">
+                                    <div class="group-emoji">✨</div>
+                                    <div class="group-info">
+                                        <h3>Daily Motivation & Hope</h3>
+                                        <p>2,103 members</p>
+                                    </div>
+                                    <div class="activity-badge active">Very Active</div>
+                                </div>
+                                <p class="group-description">Start each day with positivity and encouraging messages from the community.</p>
+                                <div class="group-tags">
+                                    <span class="tag">Motivation</span>
+                                    <span class="tag">Inspiration</span>
+                                    <span class="tag">Daily Check-ins</span>
+                                </div>
+                                <button class="btn btn-primary full-width">
+                                    <i data-lucide="users"></i>
+                                    Join Group
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Page -->
+        <section id="page-resources" class="page">
+            <div class="hero-section">
+                <div class="container">
+                    <h1 class="hero-title">
+                        Mental Health <span class="gradient-text">Resources</span>
+                    </h1>
+                    <p class="hero-description">
+                        Access our comprehensive library of articles, tools, and guided exercises 
+                        to support your mental wellness journey.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="container">
+                    <div class="resources-grid">
+                        <div class="resource-category">
+                            <div class="category-header">
+                                <i data-lucide="brain"></i>
+                                <h3>Coping Strategies</h3>
+                            </div>
+                            <div class="resource-list">
+                                <a href="#" class="resource-item">
+                                    <h4>5-4-3-2-1 Grounding Technique</h4>
+                                    <p>A simple method to manage anxiety in the moment</p>
+                                </a>
+                                <a href="#" class="resource-item">
+                                    <h4>Progressive Muscle Relaxation</h4>
+                                    <p>Step-by-step guide to releasing physical tension</p>
+                                </a>
+                                <a href="#" class="resource-item">
+                                    <h4>Breathing Exercises for Stress</h4>
+                                    <p>Different breathing patterns for different situations</p>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-category">
+                            <div class="category-header">
+                                <i data-lucide="heart"></i>
+                                <h3>Emotional Wellness</h3>
+                            </div>
+                            <div class="resource-list">
+                                <a href="#" class="resource-item">
+                                    <h4>Understanding Your Emotions</h4>
+                                    <p>Learn to identify and process your feelings</p>
+                                </a>
+                                <a href="#" class="resource-item">
+                                    <h4>Building Emotional Resilience</h4>
+                                    <p>Strengthen your ability to bounce back from challenges</p>
+                                </a>
+                                <a href="#" class="resource-item">
+                                    <h4>Self-Compassion Practices</h4>
+                                    <p>Treat yourself with kindness during difficult times</p>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-category">
+                            <div class="category-header">
+                                <i data-lucide="users"></i>
+                                <h3>Relationships</h3>
+                            </div>
+                            <div class="resource-list">
+                                <a href="#" class="resource-item">
+                                    <h4>Healthy Communication Skills</h4>
+                                    <p>Express your needs clearly and listen effectively</p>
+                                </a>
+                                <a href="#" class="resource-item">
+                                    <h4>Setting Boundaries</h4>
+                                    <p>Protect your mental health in relationships</p>
+                                </a>
+                                <a href="#" class="resource-item">
+                                    <h4>Dealing with Difficult People</h4>
+                                    <p>Strategies for maintaining your peace of mind</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="page-contact" class="page">
+            <div class="hero-section">
+                <div class="container">
+                    <div class="hero-badge">
+                        <i data-lucide="heart"></i>
+                        <span>Always Here to Help</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Contact <span class="gradient-text">Us</span>
+                    </h1>
+                    <p class="hero-description">
+                        We're here to help with questions, feedback, or if you need immediate support. 
+                        Your wellbeing is our priority.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Crisis Alert -->
+            <div class="crisis-alert">
+                <div class="container">
+                    <div class="alert-content">
+                        <i data-lucide="alert-triangle"></i>
+                        <div class="alert-text">
+                            <h3>🚨 Crisis Resources - Available 24/7</h3>
+                            <p>If you're in immediate danger or having thoughts of self-harm, please reach out for immediate help.</p>
+                        </div>
+                    </div>
+                    <div class="crisis-resources">
+                        <div class="crisis-card">
+                            <h4>Suicide Prevention Lifeline</h4>
+                            <div class="crisis-number">988</div>
+                            <p>Call or Text • Free • Confidential</p>
+                        </div>
+                        <div class="crisis-card">
+                            <h4>Crisis Text Line</h4>
+                            <div class="crisis-number">Text HOME to 741741</div>
+                            <p>24/7 Support via Text</p>
+                        </div>
+                        <div class="crisis-card">
+                            <h4>Emergency Services</h4>
+                            <div class="crisis-number">911</div>
+                            <p>Immediate Physical Danger</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h2>Get in Touch</h2>
+                            <div class="contact-methods">
+                                <div class="contact-card">
+                                    <div class="contact-icon">
+                                        <i data-lucide="phone"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h3>Crisis Support</h3>
+                                        <p class="contact-primary">988</p>
+                                        <p class="contact-secondary">Suicide & Crisis Lifeline</p>
+                                        <p class="contact-description">24/7 free and confidential support</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-card">
+                                    <div class="contact-icon">
+                                        <i data-lucide="mail"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h3>General Support</h3>
+                                        <p class="contact-primary">support@mindfulspace.com</p>
+                                        <p class="contact-secondary">Non-urgent inquiries</p>
+                                        <p class="contact-description">Response within 24 hours</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-card">
+                                    <div class="contact-icon">
+                                        <i data-lucide="clock"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h3>Support Hours</h3>
+                                        <p class="contact-primary">Monday - Friday: 9AM-6PM EST</p>
+                                        <p class="contact-secondary">Saturday: 10AM-4PM EST</p>
+                                        <p class="contact-description">Crisis support available 24/7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-container">
+                            <h2>Send Us a Message</h2>
+                            <p>For non-urgent inquiries, feedback, or general questions. We'll respond within 24 hours.</p>
+                            
+                            <form id="contact-form" class="contact-form">
+                                <div class="form-group">
+                                    <label for="contact-name">Name (Optional)</label>
+                                    <input type="text" id="contact-name" placeholder="Your name or anonymous">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-email">Email</label>
+                                    <input type="email" id="contact-email" placeholder="your.email@example.com" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-subject">Subject</label>
+                                    <input type="text" id="contact-subject" placeholder="What's this about?" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-message">Message</label>
+                                    <textarea id="contact-message" rows="6" placeholder="Tell us how we can help..." required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-lg full-width">
+                                    <i data-lucide="send"></i>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h3>MindfulSpace</h3>
+                        <p>Therapy & Wellness</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#" data-page="about">About Us</a></li>
+                            <li><a href="#" data-page="resources">Resources</a></li>
+                            <li><a href="#" data-page="community">Community</a></li>
+                            <li><a href="#" data-page="contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Crisis Support</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Accessibility</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Get in Touch</h4>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i data-lucide="phone"></i>
+                                <div>
+                                    <p>Crisis Support</p>
+                                    <p>988 (24/7 Free)</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i data-lucide="mail"></i>
+                                <div>
+                                    <p>Email Support</p>
+                                    <p>support@mindfulspace.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 MindfulSpace. All rights reserved. | Science Fair Project - Educational Use Only</p>
+                    <div class="footer-badges">
+                        <span><i data-lucide="shield"></i> HIPAA Compliant</span>
+                        <span><i data-lucide="heart"></i> Anonymous & Safe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
